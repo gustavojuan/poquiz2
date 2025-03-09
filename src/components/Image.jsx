@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
+import imagen_default from '../assets/question_mark.png'
 
 export default function Image() {
-  const image_default = "../assets/question_mark.png";
+
   const sprite = useSelector((state) => state.pokemon.misteryPokemon?.sprite);
   const reveal = useSelector((state) => state.pokemon.reveal);
 
-  const image = (sprite) ? sprite : image_default
+  const image = (sprite) ? sprite : imagen_default
   return (
     <div>
       <img

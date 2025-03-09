@@ -46,6 +46,7 @@ const pokemonSlice = createSlice({
             .addCase(getAsyncPokemon.pending, (state)=> {
                 state.loading = true;
                 state.reveal = false
+                state.misteryPokemon = null
             })
             .addCase(getAsyncPokemon.fulfilled, (state, action)=> {
                 state.loading = false;
